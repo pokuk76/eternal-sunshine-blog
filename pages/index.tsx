@@ -11,7 +11,6 @@ import type { Blog } from 'contentlayer/generated'
 
 import AdinkraLogo from '@/components/AdinkraLogo'
 import { useTheme } from 'next-themes'
-  
 
 const MAX_DISPLAY = 5
 
@@ -23,40 +22,41 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
-  
-  const { theme, setTheme, resolvedTheme } = useTheme(); // Not sure if this is the best way to go about it...
-  
+  const { theme, setTheme, resolvedTheme } = useTheme() // Not sure if this is the best way to go about it...
+
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      
-      <div>
 
-        <div className="flex flex-col items-center my-6 xl:flex-row gap-x-12 xl:mb-12">
+      <div>
+        <div className="my-6 flex flex-col items-center gap-x-12 xl:mb-12 xl:flex-row">
           <div className="pt-6">
-            <h1 className="pb-6 font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
-                style={{fontSize: '2.8rem'}}
+            <h1
+              className="pb-6 font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+              style={{ fontSize: '2.8rem' }}
             >
               Kofi's Blog
             </h1>
-            <h2 className="text-lg prose text-gray-600 dark:text-gray-400">
-              [Something else]
-            To that end, I plan to use this mostly for academic and technical writing. <i>But</i> I can't promise there won't be an attempt at a philosophical post every now and then.
-            Hopefully others find some use in my writing as well.
+            <h2 className="prose text-lg text-gray-600 dark:text-gray-400">
+              [Something else] To that end, I plan to use this mostly for academic and technical
+              writing. <i>But</i> I can't promise there won't be an attempt at a philosophical post
+              every now and then. Hopefully others find some use in my writing as well.
             </h2>
           </div>
-          <div className="flex items-center justify-center mx-2 my-12 w-96">
-            <AdinkraLogo mode={ (theme === 'light' || resolvedTheme === 'light') ? "lightMode" : "darkMode"} />
+          <div className="mx-2 my-12 flex w-96 items-center justify-center">
+            <AdinkraLogo
+              mode={theme === 'light' || resolvedTheme === 'light' ? 'lightMode' : 'darkMode'}
+            />
           </div>
         </div>
-
       </div>
-      
+
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <h2 className="pb-6 font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl"
-            style={{fontSize: '2.5rem'}}
+        <h2
+          className="pb-6 font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl"
+          style={{ fontSize: '2.5rem' }}
         >
-            Latest
+          Latest
         </h2>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
