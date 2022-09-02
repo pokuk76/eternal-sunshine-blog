@@ -6,7 +6,7 @@ const siteMetadata = {
   author: 'Kofi Poku',
   headerTitle: 'The Eternal Sunshine Blog',
   description: 'A [mostly] academic & technical blog',
-  // description: `Here's my blog; it's been ~2 years in the making. I really wanted to finally get it out on the internet as a way to track my research in autonomous systems and energy/power systems. 
+  // description: `Here's my blog; it's been ~2 years in the making. I really wanted to finally get it out on the internet as a way to track my research in autonomous systems and energy/power systems.
   // To that end, I plan to use it for mostly academic and technical writing. ${<i>But</i>} I can't promise there won't be an attempt at a philosophical post every not and then.`,
   language: 'en-us',
   theme: 'dark', // system, dark or light
@@ -35,7 +35,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    
+
     // provider: 'buttondown',
     provider: null,
   },

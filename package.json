@@ -13,7 +13,9 @@
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
-    "prepare": "husky install"
+    "prepare": "husky install", 
+    "prettier": "npx prettier pages components layouts scripts --check",
+    "prettier:fix": "npm run prettier -- --write"
   },
   "dependencies": {
     "@fontsource/inter": "4.5.2",
