@@ -11,4 +11,15 @@ const formatDate = (date: string) => {
   return now
 }
 
+const formatDatePliny = (date: string, locale = 'en-US') => {
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }
+  const now = new Date(date).toLocaleDateString(locale, options)
+
+  return now
+}
+
 export default formatDate
