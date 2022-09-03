@@ -19,7 +19,7 @@ module.exports = {
   ],
   rules: {
     // 'prettier/prettier': 'error',
-    "prettier/prettier": [{
+    "prettier/prettier": ['warn', {
       "endOfLine":"auto"
     }],
     'react/react-in-jsx-scope': 'off',
