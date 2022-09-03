@@ -1,6 +1,5 @@
 // @ts-check
 
-/** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'Eternal Sunshine Blog',
   author: 'Kofi Poku',
